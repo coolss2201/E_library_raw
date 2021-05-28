@@ -1,0 +1,107 @@
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>Add new Alumni</h4>
+        <form #addalumni="ngForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="form-group">
+            <label>Alumni Name</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              placeholder="Enter alumni name"
+              name="name"
+              [(ngModel)]="alumni.name"
+            />
+          </div>
+          <div class="form-group">
+            <label>Id</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              placeholder="Create Id"
+              name="id"
+              [(ngModel)]="alumni.id"
+            />
+          </div>
+          <div class="form-group">
+            <label>password</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              placeholder="Create password"
+              name="pass"
+              [(ngModel)]="alumni.password"
+            />
+          </div>
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              placeholder="Contact Number"
+              name="contact"
+              [(ngModel)]="alumni.contact"
+            />
+          </div>
+          <div class="form-group">
+            <label>Mail</label>
+            <input
+              required
+              type="email"
+              class="form-control"
+              placeholder="Mail Id"
+              name="mail"
+              [(ngModel)]="alumni.mail"
+            />
+          </div>
+          
+          <button
+            [disabled]="addalumni.invalid"
+            type="submit"
+            class="btn btn-primary"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="col-sm-9">
+        <h4>Alumni List</h4>
+        <br />
+        <table class="table table-dark table-striped table-responsive-sm text-center">
+          <thead>
+            <tr>
+              <th scope="col">Sl No.</th>
+              <th scope="col">Name</th>
+              <th scope="col">Id</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Mail</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let alumni of alumnis; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ alumni.name }}</td>
+              <td>{{ alumni.id }}</td>
+              <td>{{ alumni.contact }}</td>
+              <td>{{ alumni.mail }}</td>
+              <td>
+                <i
+                  class="fa fa-trash"
+                  (click)="delete($event)"
+                  [title]="alumni.id"
+                  style="font-size: 20px; color: red; cursor: pointer"
+                ></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

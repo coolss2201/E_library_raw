@@ -1,0 +1,54 @@
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.sidenav {
+  margin-top: 10vh;
+  position: fixed;
+}
+
+.container {
+  height: 83vh;
+  width: 90%;
+  background-image: url("https://webstockreview.net/images/awards-clipart-scroll-11.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.col-sm-8 {
+  margin-left: 33vw;
+  margin-top: 8vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.notice {
+  color: black;
+  font-size: 18px;
+  font-style: italic;
+}
+.list {
+  height: 60vh;
+  overflow: auto;
+}
+
+@media only screen and (max-width:700px) {
+  .container{
+    height: 75vh;
+    width: 100%;
+    background-size: contain;
+  }
+  .sidenav{
+    position: absolute;
+  }
+  .col-sm-8{
+    margin-left: 0px;
+    margin-top: 80vh;
+  }
+  .list{
+    margin-left:-10vw;
+  }
+}

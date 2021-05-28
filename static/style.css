@@ -1,0 +1,14 @@
+.text {
+  font-size: larger;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+footer{
+  position: fixed;
+  background-color: lightblue;
+  bottom: 0;
+}

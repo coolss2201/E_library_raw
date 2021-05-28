@@ -1,0 +1,22 @@
+.list{
+    margin-top: -15px;
+    padding-top: 15px;
+    margin-bottom: -15px;
+    background-color: aquamarine;
+    font-size: large;
+}
+.list-nav{
+    cursor: pointer;;
+}
+.out{
+    right: 10px;
+    position: fixed;
+}
+@media screen and (max-width:700px) {
+    .out{
+        right: 0px;
+        left: 5px;
+        position: relative;
+    }
+    
+}

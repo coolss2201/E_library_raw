@@ -1,0 +1,31 @@
+form {
+  height: 300px;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+select:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back {
+  display: block;
+  position: relative;
+}
+
+.back::after {
+  content: "";
+  background: url("https://image.shutterstock.com/image-photo/book-stack-on-wood-desk-260nw-1017025384.jpg");
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+}
+@media only screen and (max-width:700px) {
+ 
+}

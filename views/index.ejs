@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="navbar-brand">
+        <i class="fa fa-scribd" style="color: rgb(0, 221, 0)"></i
+        ><i class="fa fa-scribd" style="color: rgb(0, 221, 0)"></i>
+      </div>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item">
+            <a
+              href="https://www.facebook.com/profile.php?id=100009082996099"
+              target="_blank"
+              class="fa fa-facebook nav-link"
+              style="font-size: 24px"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://twitter.com/coolsayan084"
+              target="_blank"
+              class="fa fa-twitter nav-link"
+              style="font-size: 24px"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron text"><b>Welcome</b> to my e-library website...</div>
+
+    <% if(data){ %>
+    <p style="text-align: center; color: red; font-size: 20px">
+      Wrong credentials!!!
+    </p>
+    <% } %>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <a target="_blank" href="/student"
+            ><img src="./image/student.jpg" class="img-responsive" alt="Image"
+          /></a>
+          <h3>Student</h3>
+        </div>
+        <div class="col-sm-4">
+          <a
+            data-toggle="modal"
+            data-target="#alumniModal"
+            style="cursor: pointer"
+            target="_blank"
+          >
+            <img src="./image/alumni.jpg" class="img-responsive" alt="Image" />
+          </a>
+          <h3>Alumni</h3>
+        </div>
+        <div class="col-sm-4">
+          <a
+            style="cursor: pointer"
+            data-toggle="modal"
+            data-target="#adminModal"
+            ><img src="./image/admin.jpg" class="img-responsive" alt="Image"
+          /></a>
+          <h3>Admin</h3>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <!-- Modal -->
+    <div id="alumniModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Alumni Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="alumni">
+              <div class="form-group">
+                <label>User ID:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="id"
+                  placeholder="Enter User ID"
+                />
+              </div>
+              <div class="form-group">
+                <label>Password:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="pass"
+                  placeholder="Enter Password"
+                />
+              </div>
+              <button class="btn btn-primary" type="submit">Log In</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="adminModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Admin Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="admin">
+              <div class="form-group">
+                <label>User ID:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="id"
+                  placeholder="Enter User ID"
+                />
+              </div>
+              <div class="form-group">
+                <label>Password:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="pass"
+                  placeholder="Enter Password"
+                />
+              </div>
+              <button class="btn btn-primary" type="submit">Log In</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="container-fluid text-center">
+      <p>&#169; copyright reserved</p>
+    </footer>
+  </body>
+</html>

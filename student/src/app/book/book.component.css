@@ -1,0 +1,49 @@
+img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+a{
+    width: 100%;
+}
+.panel-body{
+    height: 50px;
+    overflow:auto;
+    background-color:lightgrey;
+    text-align: center;
+    font-weight: bold;
+}
+.panel{
+    margin: 15px 0px;
+}
+
+.panel:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+    display: block;
+    position: relative;
+  }
+  
+  .container::after {
+    content: "";
+    background: url("https://www.hiltoncc.com/wp-content/uploads/2015/02/wooden-background-1920x12001.jpg");
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+  @media only screen and (max-width:700px) {
+    .col-sm-3{
+        width: 33%;
+    }
+    img{
+        height: 20vh;
+    }
+  }
